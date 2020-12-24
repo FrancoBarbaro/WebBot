@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "target": "es2020",
+    "lib": ["es2020"],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "strict": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"]
+}
