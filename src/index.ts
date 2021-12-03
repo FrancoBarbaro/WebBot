@@ -26,13 +26,13 @@ await page.goto(url);
 const popupCloseButton = await page.waitForSelector(
   'button[class*="c-close-icon"]'
 );
-await popupCloseButton.click();
+await popupCloseButton?.click();
 await page.waitForTimeout(1000);
 // Type into the search bar
 const searchBar = await page.waitForSelector("#gh-search-input", {
   timeout: 10000,
 });
-await searchBar.type(product, { delay: 50 });
+await searchBar?.type(product, { delay: 50 });
 await page.waitForTimeout(500);
 await page.keyboard.press("ArrowDown");
 await page.keyboard.press("ArrowRight");
@@ -59,3 +59,5 @@ await page.keyboard.press("Enter");
 // Wait before finishing
 await page.waitForTimeout(10000);
 console.info("Goodbye, I am done!");
+browser.close();
+process.exit();
